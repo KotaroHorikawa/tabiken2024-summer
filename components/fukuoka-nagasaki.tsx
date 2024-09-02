@@ -195,7 +195,7 @@ export function FukuokaNagasaki() {
         <div ref={sightsRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
           <h2 className="text-3xl font-bold mb-8 w-full text-center">#Sights</h2>
           {/* 太宰府天満宮 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: text-centerを追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
@@ -206,7 +206,7 @@ export function FukuokaNagasaki() {
               alt="太宰府天満宮"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#FF5722] font-bold mb-2 text-left">#Sights</p> {/* 変更: text-leftを追加 */}
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
             <h3 className="text-3xl font-bold mb-4">太宰府天満宮</h3>
             <p className="mb-4">学問の神様を祀る<br />歴史ある神社。</p>
             <Link href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
@@ -220,7 +220,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* グラバー園 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: text-centerを追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
             </div>
@@ -231,7 +231,7 @@ export function FukuokaNagasaki() {
               alt="キャナルシティ博多"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#FF5722] font-bold mb-2 text-left">#Sights</p> {/* 変更: text-leftを追加 */}
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
             <h3 className="text-3xl font-bold mb-4">キャナルシティ博多</h3>
             <p className="mb-4">自然の中で多彩な体験を得る<br />「都市の劇場」</p>
             <Link href="https://canalcity.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
@@ -245,7 +245,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 眼鏡橋 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: text-centerを追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               03
             </div>
@@ -256,7 +256,7 @@ export function FukuokaNagasaki() {
               alt="眼鏡橋"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#FF5722] font-bold mb-2 text-left">#Sights</p> {/* 変更: text-leftを追加 */}
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
             <h3 className="text-3xl font-bold mb-4">眼鏡橋</h3>
             <p className="mb-4">長崎を代表する観光名所<br />石橋の技術の粋を集めた橋。</p>
             <Link href="https://nagasaki-travel.com/spots/detail/169" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
@@ -274,7 +274,7 @@ export function FukuokaNagasaki() {
         <div ref={restoRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
           <h2 className="text-3xl font-bold mb-8 w-full text-center">#Resto</h2>
           {/* 鯛茶漬け専門店 鯛茶福 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: text-centerを追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
@@ -299,7 +299,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 四海樓 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: text-centerを追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
             </div>
@@ -324,7 +324,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 元祖長浜屋 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-auto text-center"> {/* 変更: text-centerを追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-auto text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               03
             </div>
@@ -335,7 +335,7 @@ export function FukuokaNagasaki() {
               alt="元祖長浜屋"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <p className="text-[#FF5722] font-bold mb-2">#Rest</p>
+            <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
             <h3 className="text-3xl font-bold mb-4">元祖長浜屋</h3>
             <p className="mb-4">博多豚骨ラーメンの<br />発祥の店として有名。</p>
             <Link href="http://www.ganso-nagahamaya.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
@@ -354,7 +354,7 @@ export function FukuokaNagasaki() {
           <h2 className="text-3xl font-bold mb-8 w-full text-center">#Rest</h2> {/* 変更: text-centerを追加 */}
           
           {/* THE LIVELY 福岡博多 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: mx-2からmx-3に変更 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: mx-2からmx-3に変更 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
@@ -379,7 +379,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 長崎スカイホテル */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-5/12 mx-3 text-center"> {/* 変更: mx-2からmx-3に変更 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: mx-2からmx-3に変更 */}
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
             </div>

@@ -186,7 +186,7 @@ export function FukuokaNagasaki() {
           <h3 className="text-xl font-bold mb-2">夏やすみ最後の思い出を</h3>
           <h3 className="text-xl font-bold mb-2">24人で楽しみ尽くすために</h3>
           <div className="flex items-center">
-            <h3 className="text-xl font-bold">ICHIRIDUKAが提案する"福岡・長崎"ガイド。</h3>
+            <h3 className="text-xl font-bold">ICHIRIDUKAが提案する福岡・長崎ガイド。</h3>
             <MapPin className="ml-2" />
           </div>
         </div>

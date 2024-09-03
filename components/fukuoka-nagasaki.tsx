@@ -183,10 +183,10 @@ export function FukuokaNagasaki() {
 
         {/* Text Content */}
         <div className="mt-8 text-white">
-          <h3 className="text-xl font-bold mb-2">新しい街の楽しみ方を</h3>
-          <h3 className="text-xl font-bold mb-2">ICHIRIDUKAが提案する</h3>
+          <h3 className="text-xl font-bold mb-2">夏やすみ最後の思い出を</h3>
+          <h3 className="text-xl font-bold mb-2">24人で楽しみ尽くすために</h3>
           <div className="flex items-center">
-            <h3 className="text-xl font-bold">わたしとぼくの"福岡・長崎"ガイド。</h3>
+            <h3 className="text-xl font-bold">ICHIRIDUKAが提案する"福岡・長崎"ガイド。</h3>
             <MapPin className="ml-2" />
           </div>
         </div>
@@ -279,7 +279,7 @@ export function FukuokaNagasaki() {
               01
             </div>
             <Image
-              src="/placeholder.svg?height=300&width=600"
+              src="/img/taitya.jpg"
               width={500}
               height={300}
               alt="鯛茶漬け"
@@ -304,7 +304,7 @@ export function FukuokaNagasaki() {
               02
             </div>
             <Image
-              src="/placeholder.svg?height=300&width=600"
+              src="/img/nagapon.jpeg"
               width={500}
               height={300}
               alt="四海樓 interior"
@@ -329,7 +329,7 @@ export function FukuokaNagasaki() {
               03
             </div>
             <Image
-              src="/placeholder.svg?height=300&width=600"
+              src="/img/nagahamaya.webp"
               width={500}
               height={300}
               alt="元祖長浜屋"
@@ -359,14 +359,14 @@ export function FukuokaNagasaki() {
               01
             </div>
             <Image
-              src="/placeholder.svg?height=300&width=600"
+              src="/img/hotehaka.jpg"
               width={500}
               height={300}
               alt="THE LIVELY 福岡博多"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
             <p className="text-[#FF5722] font-bold mb-2">#Rest</p>
-            <h3 className="text-3xl font-bold mb-4">THE LIVELY 福岡博多</h3>
+            <h3 className="text-3xl font-bold mb-4">&HOTEL HAKATA</h3>
             <p className="mb-4">モダンでスタイリッシュな<br />博多駅近くのホテル。</p>
             <Link href="https://www.thelively.com/hakata/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
@@ -384,7 +384,7 @@ export function FukuokaNagasaki() {
               02
             </div>
             <Image
-              src="/placeholder.svg?height=300&width=600"
+              src="/img/skyhotel.jpg"
               width={500}
               height={300}
               alt="長崎スカイホテル exterior"

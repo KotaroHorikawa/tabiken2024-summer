@@ -452,28 +452,78 @@ export default function Component() {
         {/* Resto Section */}
         <div ref={restoRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
           <h2 className="text-3xl font-bold mb-8 w-full text-center">#Resto</h2>
-          {/* 鯛茶漬け専門店 鯛茶福 */}
+          {/* 海鮮屋　はじめの一歩 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
             <Image
-              src="/img/taitya.jpg"
+              src="/img/gomakan.webp"
               width={500}
               height={300}
-              alt="鯛茶漬け"
+              alt="はじめの一歩"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
             <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
-            <h3 className="text-3xl font-bold mb-4">鯛茶漬け専門店 鯛茶福</h3>
-            <p className="mb-4">福岡名物の鯛茶漬けを<br />専門に提供する人気店。</p>
-            <Link href="https://www.taicha-fuku.com/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+            <h3 className="text-3xl font-bold mb-4">海鮮屋　はじめの一歩</h3>
+            <p className="mb-4">鮮度抜群の海鮮を<br />リーズナブルに楽しめる</p>
+            <Link href="https://hitosara.com/0006087723/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />
             </Link>
             <div className="mt-8">
               <p className="font-bold mb-2">FUKUOKA</p>
-              <p>福岡県福岡市中央区大名1-15-11</p>
+              <p>福岡県福岡市博多区博多駅前3-7-15 庄野ビル1F</p>
+            </div>
+          </div>
+
+          {/* めんたい料理　博多 椒房庵*/}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              02
+            </div>
+            <Image
+              src="/img/mentai.webp"
+              width={500}
+              height={300}
+              alt="四海樓 interior"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
+            <h3 className="text-3xl font-bold mb-4">めんたい料理　博多 椒房庵</h3>
+            <p className="mb-4">博多名物の「めん鯛まぶし」<br />博多明太子を味わえる店</p>
+            <Link href="https://hitosara.com/0004028039/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">FUKUOKA</p>
+              <p>福岡県福岡市博多区博多駅中央街1-1 アミュプラザ博多9F</p>
+            </div>
+          </div>
+
+          {/* 元祖長浜屋 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              01
+            </div>
+            <Image
+              src="/img/nagahamaya.webp"
+              width={500}
+              height={300}
+              alt="元祖長浜屋"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
+            <h3 className="text-3xl font-bold mb-4">元祖長浜屋</h3>
+            <p className="mb-4">博多豚骨ラーメンの<br />発祥の店として有名。</p>
+            <Link href="http://www.ganso-nagahamaya.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">FUKUOKA</p>
+              <p>福岡県福岡市博多区長浜1-1-1</p>
             </div>
           </div>
 
@@ -502,28 +552,28 @@ export default function Component() {
             </div>
           </div>
 
-          {/* 元祖長浜屋 */}
+          {/* ツル茶ん */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               03
             </div>
             <Image
-              src="/img/nagahamaya.webp"
+              src="/img/katu.webp"
               width={500}
               height={300}
-              alt="元祖長浜屋"
+              alt="ツル茶ん"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
             <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
-            <h3 className="text-3xl font-bold mb-4">元祖長浜屋</h3>
-            <p className="mb-4">博多豚骨ラーメンの<br />発祥の店として有名。</p>
-            <Link href="http://www.ganso-nagahamaya.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+            <h3 className="text-3xl font-bold mb-4">ツル茶ん</h3>
+            <p className="mb-4">長崎のソウルフード<br />「トルコライス」が堪能できる</p>
+            <Link href="https://www.nagasaki-tabinet.com/eat/64362" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />
             </Link>
             <div className="mt-8">
-              <p className="font-bold mb-2">FUKUOKA</p>
-              <p>福岡県福岡市博多区長浜1-1-1</p>
+              <p className="font-bold mb-2">NAGASAKI</p>
+              <p>長崎県長崎市油屋町2−47</p>
             </div>
           </div>
         </div>

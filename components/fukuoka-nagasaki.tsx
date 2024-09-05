@@ -245,7 +245,7 @@ export default function Component() {
             </div>
           </div>
 
-          {/* グラバー園 */}
+          {/* キャナルシティ博多 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
@@ -265,36 +265,189 @@ export default function Component() {
               <ChevronRight className="ml-2" />
             </Link>
             <div className="mt-8">
-              <p className="font-bold mb-2">NAGASAKI</p>
-              <p>長崎県長崎市南山手町8-1</p>
+              <p className="font-bold mb-2">FUKUOKA</p>
+              <p>福岡県福岡市博多区住吉1丁目2</p>
             </div>
           </div>
 
-          {/* 眼鏡橋 */}
+          {/* 門司港レトロ */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               03
             </div>
             <Image
-              src={images1[2]}
+              src={"/img/retoro.jpg"}
               width={500}
               height={300}
-              alt="眼鏡橋"
+              alt="門司港レトロ"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
             <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
-            <h3 className="text-3xl font-bold mb-4">眼鏡橋</h3>
-            <p className="mb-4">長崎を代表する観光名所<br />石橋の技術の粋を集めた橋。</p>
-            <Link href="https://nagasaki-travel.com/spots/detail/169" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+            <h3 className="text-3xl font-bold mb-4">門司港レトロ</h3>
+            <p className="mb-4">明治・大正時代の建物が立ち並ぶ<br />散策が楽しいレトロな港町。</p>
+            <Link href="https://www.mojiko.info/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">FUKUOKA</p>
+              <p>福岡県北九州市門司区港町5-1</p>
+            </div>
+          </div>
+
+          {/* 糸島半島 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              04
+            </div>
+            <Image
+              src={"/img/itojima.jpg"}
+              width={500}
+              height={300}
+              alt="糸島半島"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
+            <h3 className="text-3xl font-bold mb-4">糸島半島</h3>
+            <p className="mb-4">美しい海岸線と自然がに囲まれた<br />カフェやアートスポットが自慢。</p>
+            <Link href="https://www.itoshima-kanko.net/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">FUKUOKA</p>
+              <p>福岡県糸島市</p>
+            </div>
+          </div>
+
+          {/* ハウステンボス */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              01
+            </div>
+            <Image
+              src={"/img/house.jpg"}
+              width={500}
+              height={300}
+              alt="ハウステンボス"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
+            <h3 className="text-3xl font-bold mb-4">ハウステンボス</h3>
+            <p className="mb-4">ヨーロッパ風の街並みが魅力的な<br />九州随一のテーマパーク</p>
+            <Link href="https://www.huistenbosch.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />
             </Link>
             <div className="mt-8">
               <p className="font-bold mb-2">NAGASAKI</p>
-              <p>長崎県長崎市魚の町</p>
+              <p>長崎県佐世保市ハウステンボス町1-1</p>
+            </div>
+          </div>
+
+          {/* グラバー園 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              02
+            </div>
+            <Image
+              src={"/img/graba.jpeg"}
+              width={500}
+              height={300}
+              alt="グラバー園"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
+            <h3 className="text-3xl font-bold mb-4">グラバー園</h3>
+            <p className="mb-4">長崎の歴史が感じられる<br />異国情緒あふれる庭園。</p>
+            <Link href="https://www.glover-garden.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">NAGASAKI</p>
+              <p>長崎県長崎市南山手町8-1</p>
+            </div>
+          </div>
+
+          {/* 稲佐山 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              03
+            </div>
+            <Image
+              src={"/img/isayama.jpeg"}
+              width={500}
+              height={300}
+              alt="稲佐山"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
+            <h3 className="text-3xl font-bold mb-4">稲佐山</h3>
+            <p className="mb-4">夜景が特に美しい<br />長崎市内を一望できる絶景スポット</p>
+            <Link href="https://www.inasayama.com/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">NAGASAKI</p>
+              <p>長崎県長崎市稲佐町364</p>
+            </div>
+          </div>
+
+          {/* 九十九島 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              04
+            </div>
+            <Image
+              src={"/img/parusi.jpeg"}
+              width={500}
+              height={300}
+              alt="九十九島"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
+            <h3 className="text-3xl font-bold mb-4">九十九島</h3>
+            <p className="mb-4">遊覧船やカヤックが楽しめる<br />海のリゾート施設。</p>
+            <Link href="https://www.pearlsea.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">NAGASAKI</p>
+              <p>長崎県佐世保市鹿子前町1008</p>
+            </div>
+          </div>
+
+
+          {/* 雲仙温泉 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
+            <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+              05
+            </div>
+            <Image
+              src={"/img/unzen.jpeg"}
+              width={500}
+              height={300}
+              alt="雲仙温泉"
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-[#FF5722] font-bold mb-2">#Sights</p>
+            <h3 className="text-3xl font-bold mb-4">雲仙温泉</h3>
+            <p className="mb-4">自然に囲まれた<br />絶景の露天風呂</p>
+            <Link href="https://www.unzen.org/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+              READ MORE
+              <ChevronRight className="ml-2" />
+            </Link>
+            <div className="mt-8">
+              <p className="font-bold mb-2">NAGASAKI</p>
+              <p>長崎県雲仙市小浜町雲仙</p>
             </div>
           </div>
         </div>
+
+        
 
         {/* Resto Section */}
         <div ref={restoRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
@@ -394,13 +547,13 @@ export default function Component() {
             <p className="text-[#FF5722] font-bold mb-2">#Rest</p>
             <h3 className="text-3xl font-bold mb-4">&HOTEL HAKATA</h3>
             <p className="mb-4">モダンでスタイリッシュな<br />博多駅近くのホテル。</p>
-            <Link href="https://www.thelively.com/hakata/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+            <Link href="https://and-hotel.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />
             </Link>
             <div className="mt-8">
               <p className="font-bold mb-2">FUKUOKA</p>
-              <p>福岡県福岡市博多区博多駅南2-9-12</p>
+              <p>福岡県福岡市博多区冷泉町9-6</p>
             </div>
           </div>
 
@@ -419,13 +572,13 @@ export default function Component() {
             <p className="text-[#FF5722] font-bold mb-2">#Rest</p>
             <h3 className="text-3xl font-bold mb-4">長崎スカイホテル</h3>
             <p className="mb-4">長崎の街を一望できる<br />高台に位置するホテル。</p>
-            <Link href="https://www.nagasakiskyhotel.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
+            <Link href="https://hpdsp.jp/nagasakiskyhotel/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />
             </Link>
             <div className="mt-8">
               <p className="font-bold mb-2">NAGASAKI</p>
-              <p>長崎県長崎市江の浦町1-1</p>
+              <p>長崎県長崎市江の浦町18-1</p>
             </div>
           </div>
         </div>

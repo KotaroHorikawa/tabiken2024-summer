@@ -20,7 +20,7 @@ export default function Component() {
   const animationRef1 = useRef<number>();
   const animationRef2 = useRef<number>();
 
-  const [activeButton, setActiveButton] = useState('#Sights');
+  const [activeButton, setActiveButton] = useState<string | null>(null); // 初期状態をnullに設定
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const sightsRef = useRef<HTMLDivElement>(null);
@@ -102,7 +102,8 @@ export default function Component() {
   };
 
   const handleButtonClick = (button: string) => {
-    setActiveButton(button);
+      setActiveButton(button); // 新しいボタンが押された場合はそのボタンをアクティブに
+    
     let ref;
     switch (button) {
       case '#Sights':
@@ -126,20 +127,22 @@ export default function Component() {
       {/* Sticky Header */}
       <header className="fixed top-0 left-0 right-0 bg-[#FF5722] shadow-md z-50">
         <div className="flex justify-between items-center p-6 max-w-7xl mx-auto">
-          <div className="text-sm">Travel brochure by Ichiriduka</div>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm"> {/* 変更: スクロールでトップに戻る */}
+            Travel brochure by Ichiriduka
+          </button>
           <nav className="hidden md:flex space-x-4">
             {['#Sights', '#Resto', '#Rest'].map((button) => (
               <button
                 key={button}
                 className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg ${
                   activeButton === button
-                    ? 'bg-white text-[#FF5722] shadow-md'
-                    : 'bg-transparent text-white border-2 border-white hover:bg-white hover:text-[#FF5722]'
+                    ? 'bg-white text-[#FF5722] shadow-md' // アクティブなボタンのスタイル
+                    : 'bg-[#FF5722] text-white border-2 border-white' // 非アクティブなボタンのスタイル
                 }`}
                 style={{
                   boxShadow: activeButton === button ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none',
                 }}
-                onClick={() => handleButtonClick(button)}
+                onClick={() => handleButtonClick(button)} // ボタンをクリックしたときにhandleButtonClickを呼び出す
               >
                 {button}
               </button>
@@ -345,7 +348,7 @@ export default function Component() {
             </div>
           </div>
 
-          {/* グラバー園 */}
+          {/* グ��バー園 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
@@ -516,7 +519,7 @@ export default function Component() {
             />
             <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
             <h3 className="text-3xl font-bold mb-4">元祖長浜屋</h3>
-            <p className="mb-4">博多豚骨ラーメンの<br />発祥の店として有名。</p>
+            <p className="mb-4">博豚骨ラーメンの<br />発祥の店として有名。</p>
             <Link href="http://www.ganso-nagahamaya.co.jp/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />
@@ -541,7 +544,7 @@ export default function Component() {
             />
             <p className="text-[#FF5722] font-bold mb-2">#Resto</p>
             <h3 className="text-3xl font-bold mb-4">四海樓</h3>
-            <p className="mb-4">長崎ちゃんぽん発祥の店<br />歴史ある中華料理店。</p>
+            <p className="mb-4">長崎ちゃんぽん発祥の店<br />歴史ある中華料店。</p>
             <Link href="https://www.shikairou.com/" target="_blank" rel="noopener noreferrer" className="border border-black rounded-full px-4 py-2 inline-flex items-center">
               READ MORE
               <ChevronRight className="ml-2" />

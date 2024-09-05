@@ -326,7 +326,7 @@ export default function Component() {
           {/* ハウステンボス */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              01
+              05
             </div>
             <Image
               src={"/img/house.jpg"}
@@ -351,7 +351,7 @@ export default function Component() {
           {/* グ��バー園 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              02
+              06
             </div>
             <Image
               src={"/img/graba.jpeg"}
@@ -376,7 +376,7 @@ export default function Component() {
           {/* 稲佐山 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              03
+              07
             </div>
             <Image
               src={"/img/isayama.jpeg"}
@@ -401,7 +401,7 @@ export default function Component() {
           {/* 九十九島 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              04
+              08
             </div>
             <Image
               src={"/img/parusi.jpeg"}
@@ -427,7 +427,7 @@ export default function Component() {
           {/* 雲仙温泉 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              05
+              09
             </div>
             <Image
               src={"/img/unzen.jpeg"}
@@ -508,7 +508,7 @@ export default function Component() {
           {/* 元祖長浜屋 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              01
+              03
             </div>
             <Image
               src="/img/nagahamaya.webp"
@@ -533,7 +533,7 @@ export default function Component() {
           {/* 四海樓 */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              02
+              04
             </div>
             <Image
               src="/img/nagapon.jpeg"
@@ -558,7 +558,7 @@ export default function Component() {
           {/* ツル茶ん */}
           <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-              03
+              05
             </div>
             <Image
               src="/img/katu.webp"

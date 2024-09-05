@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, Menu, ChevronRight } from 'lucide-react'
+import { MapPin, Menu, X, ChevronRight } from 'lucide-react'
 import { Noto_Sans } from 'next/font/google'
 
 const notoSans = Noto_Sans({
@@ -12,7 +12,7 @@ const notoSans = Noto_Sans({
   display: 'swap',
 })
 
-export function FukuokaNagasaki() {
+export default function Component() {
   const [scrollPosition1, setScrollPosition1] = useState(0);
   const [scrollPosition2, setScrollPosition2] = useState(0);
   const scrollRef1 = useRef<HTMLDivElement>(null);
@@ -21,6 +21,7 @@ export function FukuokaNagasaki() {
   const animationRef2 = useRef<number>();
 
   const [activeButton, setActiveButton] = useState('#Sights');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const sightsRef = useRef<HTMLDivElement>(null);
   const restoRef = useRef<HTMLDivElement>(null);
@@ -117,39 +118,65 @@ export function FukuokaNagasaki() {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   return (
     <div className={`bg-[#FF5722] min-h-screen text-white ${notoSans.className}`}>
-      {/* Header */}
-      <header className="flex justify-between items-center p-6">
-        <div className="text-sm">Meijo University Official Circle</div>
-        <nav className="flex space-x-4">
+      {/* Sticky Header */}
+      <header className="fixed top-0 left-0 right-0 bg-[#FF5722] shadow-md z-50">
+        <div className="flex justify-between items-center p-6 max-w-7xl mx-auto">
+          <div className="text-sm">Travel brochure by Ichiriduka</div>
+          <nav className="hidden md:flex space-x-4">
+            {['#Sights', '#Resto', '#Rest'].map((button) => (
+              <button
+                key={button}
+                className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg ${
+                  activeButton === button
+                    ? 'bg-white text-[#FF5722] shadow-md'
+                    : 'bg-transparent text-white border-2 border-white hover:bg-white hover:text-[#FF5722]'
+                }`}
+                style={{
+                  boxShadow: activeButton === button ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none',
+                }}
+                onClick={() => handleButtonClick(button)}
+              >
+                {button}
+              </button>
+            ))}
+          </nav>
+          <button className="md:hidden z-50" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </header>
+
+      {/* Enhanced Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-[#FF5722] bg-opacity-95 z-40 md:hidden flex flex-col items-center justify-center">
+          <div className="text-white text-2xl font-bold mb-8">Menu</div>
           {['#Sights', '#Resto', '#Rest'].map((button) => (
             <button
               key={button}
-              className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg ${
+              className={`w-64 py-4 mb-4 text-xl font-bold rounded-full transition-all duration-300 ease-in-out ${
                 activeButton === button
-                  ? 'bg-white text-[#FF5722] shadow-md'
+                  ? 'bg-white text-[#FF5722] shadow-lg'
                   : 'bg-transparent text-white border-2 border-white hover:bg-white hover:text-[#FF5722]'
               }`}
-              style={{
-                boxShadow: activeButton === button ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none',
-              }}
               onClick={() => handleButtonClick(button)}
             >
               {button}
             </button>
           ))}
-        </nav>
-      </header>
+        </div>
+      )}
 
       {/* Main Content */}
-      <main className="px-4 pb-16"> {/* 変更: pb-16を追加して下部に余白を追加 */}
+      <main className="px-4 pb-16 pt-24"> {/* Added pt-24 to account for the fixed header */}
         <div className="text-center max-w-2xl mx-auto my-12">
           <h1 className="text-4xl font-bold mb-4">Next trip is</h1>
-          <h2 className="text-6xl font-bold mb-2">FUKUOKA &</h2>
-          <h2 className="text-6xl font-bold">NAGASAKI</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-2">FUKUOKA &</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">NAGASAKI</h2>
           <p className="mt-2">ICHIRIDUKA 2024</p>
         </div>
 
@@ -183,10 +210,9 @@ export function FukuokaNagasaki() {
 
         {/* Text Content */}
         <div className="mt-8 text-white">
-          <h3 className="text-xl font-bold mb-2">夏やすみ最後の思い出を</h3>
-          <h3 className="text-xl font-bold mb-2">24人で楽しみ尽くすために</h3>
+          <h3 className="text-xl font-bold mb-2">2泊3日を楽しみつくすための</h3>
           <div className="flex items-center">
-            <h3 className="text-xl font-bold">ICHIRIDUKAが提案する福岡・長崎ガイド。</h3>
+            <h3 className="text-xl font-bold">福岡・長崎観光ガイド。</h3>
             <MapPin className="ml-2" />
           </div>
         </div>
@@ -195,7 +221,7 @@ export function FukuokaNagasaki() {
         <div ref={sightsRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
           <h2 className="text-3xl font-bold mb-8 w-full text-center">#Sights</h2>
           {/* 太宰府天満宮 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
@@ -220,7 +246,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* グラバー園 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
             </div>
@@ -245,7 +271,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 眼鏡橋 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               03
             </div>
@@ -274,7 +300,7 @@ export function FukuokaNagasaki() {
         <div ref={restoRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
           <h2 className="text-3xl font-bold mb-8 w-full text-center">#Resto</h2>
           {/* 鯛茶漬け専門店 鯛茶福 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
@@ -299,7 +325,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 四海樓 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
             </div>
@@ -324,7 +350,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 元祖長浜屋 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-auto text-center"> {/* 変更: w-full, sm:w-5/12, md:w-4/12を追加 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               03
             </div>
@@ -350,11 +376,11 @@ export function FukuokaNagasaki() {
         </div>
 
         {/* Rest Section */}
-        <div ref={restRef} className="mt-16 space-y-8 flex flex-wrap justify-center"> {/* 変更: justify-betweenからjustify-centerに変更 */}
-          <h2 className="text-3xl font-bold mb-8 w-full text-center">#Rest</h2> {/* 変更: text-centerを追加 */}
+        <div ref={restRef} className="mt-16 space-y-8 flex flex-wrap justify-center">
+          <h2 className="text-3xl font-bold mb-8 w-full text-center">#Rest</h2>
           
           {/* THE LIVELY 福岡博多 */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: mx-2からmx-3に変更 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               01
             </div>
@@ -379,7 +405,7 @@ export function FukuokaNagasaki() {
           </div>
 
           {/* 長崎スカイホテル */}
-          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 text-center"> {/* 変更: mx-2からmx-3に変更 */}
+          <div className="bg-white text-black p-8 rounded-lg relative w-full sm:w-5/12 md:w-4/12 mx-3 mb-8 text-center">
             <div className="absolute -top-4 -right-4 bg-[#FF5722] text-white p-2 rounded-full shadow-lg" style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
               02
             </div>
